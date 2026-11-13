@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Source Article Studio logo</title>
+  <desc id="desc">A document with source lines and an orange verification mark on a teal background.</desc>
+  <rect width="512" height="512" rx="112" fill="#1F8F8A"/>
+  <circle cx="410" cy="104" r="92" fill="#58C5BE" opacity="0.55"/>
+  <circle cx="96" cy="432" r="120" fill="#58C5BE" opacity="0.35"/>
+  <path d="M132 92h180l76 76v240H132z" fill="#F6F3EC"/>
+  <path d="M312 92v84h76" fill="#C9E9E6"/>
+  <path d="M188 228h140M188 278h116M188 328h84" stroke="#16283B" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="372" cy="372" r="76" fill="#E0703A"/>
+  <path d="m332 372 28 28 52-60" fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

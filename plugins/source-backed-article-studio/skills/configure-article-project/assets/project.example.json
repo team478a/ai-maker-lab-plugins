@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "project_id": "example-project",
+  "theme": "AIを使った記事制作の実践記録",
+  "audience": "AIを使った文章作成を試したい非エンジニア",
+  "channel": "note",
+  "preset": "how-to",
+  "voice": "やわらかい丁寧語。実体験と未確認事項を区別する",
+  "objective": "読者が準備内容と現在の限界を理解できる",
+  "verified_facts": [],
+  "prohibited_content": [
+    "根拠のない売上・利用者数・効果",
+    "秘密情報・個人情報",
+    "存在しないリンク"
+  ],
+  "required_disclosures": [],
+  "required_hashtags": [],
+  "target_length": { "minimum": 1000, "maximum": 2500 }
+}

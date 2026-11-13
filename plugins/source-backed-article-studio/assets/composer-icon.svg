@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Source Article Studio</title>
+  <rect width="128" height="128" rx="28" fill="#1F8F8A"/>
+  <path d="M35 25h45l18 18v60H35z" fill="#F6F3EC"/>
+  <path d="M80 25v20h18" fill="#C9E9E6"/>
+  <path d="M49 59h34M49 72h29M49 85h21" stroke="#16283B" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="94" cy="94" r="19" fill="#E0703A"/>
+  <path d="m84 94 7 7 13-15" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "name": "ai-maker-lab",
+  "interface": {
+    "displayName": "AI MAKER LAB"
+  },
+  "plugins": [
+    {
+      "name": "source-backed-article-studio",
+      "source": {
+        "source": "local",
+        "path": "./plugins/source-backed-article-studio"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
