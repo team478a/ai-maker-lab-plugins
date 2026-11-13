@@ -1,0 +1,6 @@
+interface:
+  display_name: "根拠付き記事作成"
+  short_description: "登録したソースだけを根拠にMarkdown記事下書きを作成"
+  default_prompt: "Use $draft-source-backed-article to draft an article grounded in my configured sources."
+policy:
+  allow_implicit_invocation: true

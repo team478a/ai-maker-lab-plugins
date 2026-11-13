@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project_id": "example-project",
+  "sources": [
+    {
+      "id": "source-001",
+      "label": "本人が確認した作業メモ",
+      "role": "experience",
+      "kind": "file",
+      "location": "sources/work-log.md",
+      "observed_at": "2026-11-14",
+      "publishable": true,
+      "allowed_claims": [],
+      "access_status": "registered",
+      "notes": "記事作成時に内容を確認する"
+    }
+  ]
+}

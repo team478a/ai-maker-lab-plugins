@@ -1,0 +1,6 @@
+interface:
+  display_name: "記事プロジェクト設定"
+  short_description: "テーマ・読者・媒体・参照ソースを安全に登録する初期設定"
+  default_prompt: "Use $configure-article-project to set up an article project from my theme and source materials."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "source-backed-article-studio",
+  "version": "0.2.1",
+  "description": "Configure an article theme and sources, then create evidence-backed Markdown drafts without external publishing.",
+  "author": {
+    "name": "AI MAKER LAB",
+    "url": "https://note.com/ai_maker_lab"
+  },
+  "homepage": "https://note.com/ai_maker_lab",
+  "license": "MIT",
+  "keywords": ["article", "writing", "note", "sources"],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/configure-article-project/SKILL.md",
+      "interface": {
+        "displayName": "Source Article Studio",
+        "shortDescription": "Draft articles from sources",
+        "longDescription": "Set an article theme, audience, channel, and source roles, then create a Markdown draft with a separate evidence manifest. Source Article Studio is intended for people who want traceable drafts without writing complex prompts. It does not publish, schedule posts, process payments, or send drafts to external services.",
+        "developerName": "AI MAKER LAB",
+        "category": "Productivity",
+        "capabilities": [
+          "Configure article projects",
+          "Register source roles",
+          "Draft Markdown articles",
+          "Track evidence and review items"
+        ],
+        "websiteURL": "https://note.com/ai_maker_lab",
+        "defaultPrompt": [
+          "Set up an article project for my theme and source materials.",
+          "Draft a note article using only the facts in my registered sources.",
+          "Review my article sources and list facts that still need confirmation."
+        ],
+        "brandColor": "#1F8F8A",
+        "brandColorDark": "#58C5BE",
+        "composerIcon": "./assets/composer-icon.svg",
+        "logo": "./assets/logo.svg"
+      },
+      "review": {
+        "commerce": false,
+        "commerce_description": "This skills-only plugin does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Adds configurable article themes, source roles, private-source allowlists, Markdown drafts, and separate evidence manifests.",
+        "translations": {
+          "ja-JP": {
+            "subtitle": "テーマと資料から記事下書きを作成",
+            "description": "記事のテーマ、読者、媒体、資料の役割を設定し、根拠を別管理したMarkdown下書きを作ります。複雑なプロンプトを作らず、事実・体験・文体・背景・非公開資料を区別したい人向けです。投稿、予約、決済、外部サービスへの送信は行いません。"
+          }
+        }
+      }
+    }
+  }
+}
