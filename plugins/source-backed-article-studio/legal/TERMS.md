@@ -1,8 +1,8 @@
-# Terms of Use Draft
+# Terms of Use
 
 Last updated: 2026-11-14
 
-This document is a pre-publication draft for service-specific terms and must be reviewed before an official directory release. The software license is stated separately in `LICENSE`.
+These terms apply to use of Source Article Studio. The software license is stated separately in `LICENSE`.
 
 ## Scope
 
@@ -20,7 +20,11 @@ Generated drafts may contain errors or omissions. A successful automated check d
 
 ## Availability
 
-Features and compatibility may change. No warranty or service-level commitment is provided by this draft. Final warranty, liability, governing-law, and support terms require review before public distribution.
+Features and compatibility may change. The plugin is provided without a service-level commitment. To the maximum extent permitted by applicable law, users are responsible for reviewing and deciding whether generated material is suitable for their intended use.
+
+## Support
+
+Questions and reproducible defect reports can be submitted through the [AI MAKER LAB Plugins issue tracker](https://github.com/team478a/ai-maker-lab-plugins/issues). Do not post credentials, personal information, private sources, unpublished drafts, or other confidential data in a public issue.
 
 ## Software license
 

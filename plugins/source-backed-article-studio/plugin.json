@@ -1,13 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "source-backed-article-studio",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Configure an article theme and sources, then create evidence-backed Markdown drafts without external publishing.",
   "author": {
     "name": "AI MAKER LAB",
     "url": "https://note.com/ai_maker_lab"
   },
   "homepage": "https://note.com/ai_maker_lab",
+  "repository": "https://github.com/team478a/ai-maker-lab-plugins",
   "license": "MIT",
   "keywords": ["article", "writing", "note", "sources"],
   "extensions": {
@@ -26,6 +27,9 @@
           "Track evidence and review items"
         ],
         "websiteURL": "https://note.com/ai_maker_lab",
+        "supportURL": "https://github.com/team478a/ai-maker-lab-plugins/issues",
+        "privacyPolicyURL": "https://github.com/team478a/ai-maker-lab-plugins/blob/main/plugins/source-backed-article-studio/legal/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/team478a/ai-maker-lab-plugins/blob/main/plugins/source-backed-article-studio/legal/TERMS.md",
         "defaultPrompt": [
           "Set up an article project for my theme and source materials.",
           "Draft a note article using only the facts in my registered sources.",
@@ -41,7 +45,7 @@
         "commerce_description": "This skills-only plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "Adds configurable article themes, source roles, private-source allowlists, Markdown drafts, and separate evidence manifests.",
+        "release_notes": "Publishes support, privacy, and terms links for the skills-only article drafting workflow.",
         "translations": {
           "ja-JP": {
             "subtitle": "テーマと資料から記事下書きを作成",

@@ -1,8 +1,8 @@
-# Privacy Policy Draft
+# Privacy Policy
 
 Last updated: 2026-11-14
 
-This document is a pre-publication draft for Source Article Studio. It must be reviewed and published at an HTTPS URL before public submission.
+This policy applies to Source Article Studio, a skills-only plugin distributed by AI MAKER LAB.
 
 ## Service structure
 
@@ -40,4 +40,6 @@ Users can choose which sources to register, mark sources as private, restrict pr
 
 ## Changes and contact
 
-Material changes to data handling must be reflected in this policy before release. A public support contact and the final hosted policy URL must be added before submission.
+Material changes to data handling will be reflected in this policy and its last-updated date before release.
+
+Questions or reports can be submitted through the [AI MAKER LAB Plugins issue tracker](https://github.com/team478a/ai-maker-lab-plugins/issues). Do not include article drafts, private sources, credentials, personal information, or other confidential data in a public issue.
