@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "project_id": "beginner-note-example",
+  "theme": "根拠を整理して記事下書きを準備する方法",
+  "audience": "AIで初めて記事下書きを作る人",
+  "channel": "note",
+  "preset": "how-to",
+  "voice": "やわらかい丁寧語。確認済みと未確認を区別する",
+  "objective": "読者が記事作成前の3段階を理解できる",
+  "verified_facts": [
+    {
+      "claim": "このサンプルでは記事準備を3段階に分ける。",
+      "source_id": "sample-article-workflow"
+    }
+  ],
+  "prohibited_content": [
+    "根拠のない売上、効果、利用者数",
+    "秘密情報、個人情報",
+    "存在を確認していないリンク"
+  ],
+  "required_disclosures": [],
+  "required_hashtags": [],
+  "target_length": {
+    "minimum": 600,
+    "maximum": 1200
+  }
+}
