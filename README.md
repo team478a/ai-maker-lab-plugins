@@ -4,6 +4,9 @@ AI MAKER LABが提供するChatGPT / Codex向けPluginの配布用マーケッ�
 
 ## Source Article Studio
 
+**[日本語・無料導入ガイド](docs/JAPANESE_FREE_GUIDE.md)** — Codex CLIでの導入、記事下書き生成、注意事項を確認できます。ChatGPTやnoteへ直接インストールするものではありません。
+
+
 テーマ、読者、媒体、参照資料を設定し、根拠manifest付きのMarkdown記事下書きを作ります。
 
 - APIキーや外部サーバーは不要
