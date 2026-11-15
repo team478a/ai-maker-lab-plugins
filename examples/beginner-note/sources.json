@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "project_id": "beginner-note-example",
+  "sources": [
+    {
+      "id": "sample-article-workflow",
+      "label": "初心者向け記事準備メモ",
+      "role": "fact",
+      "kind": "file",
+      "location": "sources/article-workflow.md",
+      "observed_at": "2026-11-16",
+      "publishable": true,
+      "allowed_claims": [],
+      "access_status": "read",
+      "notes": "サンプル内の3段階だけを根拠として使用する"
+    }
+  ]
+}
