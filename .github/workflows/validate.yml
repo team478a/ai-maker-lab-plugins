@@ -18,3 +18,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: python scripts/validate_distribution.py
+      - run: python scripts/package_beginner_kit.py
+      - uses: actions/upload-artifact@v6
+        with:
+          name: source-article-studio-beginner-kit
+          path: |
+            dist/source-article-studio-starter-*.zip
+            dist/source-article-studio-starter-*.zip.sha256
+          if-no-files-found: error
