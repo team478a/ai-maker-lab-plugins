@@ -1,60 +1,92 @@
 # Source Article Studio｜日本語・無料導入ガイド
 
-> AI MAKER LAB の無料記事下書き作成Pluginです。2026-11-16時点の公開版 `0.2.2` に合わせた案内です。
+> AI MAKER LABの無料記事下書き作成Pluginです。2026-11-16時点の公開版`0.2.2`に合わせています。
 
-## 何ができる？
-- 記事テーマ・読み手・媒体を設定して、資料に基づくMarkdown記事の**下書き**を作成する。
-- 「事実」「体験」「文体」「背景」「非公開資料」を分けて管理し、根拠の一覧と確認事項も出力する。
-- noteへの直接投稿、予約投稿、記事販売、購入者分析、SNS投稿は**行わない**。
-- このPlugin自体の追加APIキー、独自課金、専用サーバーは不要。**Codexの利用環境・契約が別途必要**な場合がある。
+## できること
 
-## 対象者
-- noteの記事を、自分で確認した事実や経験を使って下書きしたい人
-- 複雑なプロンプトを毎回書き直したくない人
-- 生成記事に使った情報源や確認事項を残したい人
+- 記事テーマ、読者、媒体、目的を整理する。
+- 事実、体験、文体、背景、非公開資料を分けて登録する。
+- 登録した資料に基づくMarkdown下書きと、根拠manifestを作る。
+- 未確認事項と公開前の確認項目を残す。
 
-## 動作確認済みの導入方法：Codex CLI
-事前にCodex CLIが使用できる環境を用意してください。端末（ターミナル）で以下を実行します。
+noteへの投稿、予約、決済、SNS投稿は行いません。生成物は必ず下書きとして保存されます。
+
+## 利用条件
+
+Plugin自体はMIT Licenseで無料配布され、Plugin専用のAPIキー、独自課金、専用サーバーはありません。ただしCodexを使える環境が必要で、Codex側の利用条件や契約が別途適用される場合があります。「Pluginが無料」と「利用環境を含むすべての費用が必ず無料」は同じ意味ではありません。
+
+## 動作確認の範囲
+
+- Codex CLI: Public Gitマーケットプレイスからの導入、更新、記事プロジェクト設定、Markdownとmanifestの生成を確認済み。
+- Codexデスクトップ: Pluginの導入状態はCLIで確認済み。Plugins Directoryのロゴや説明の画面表示は利用者による目視確認が必要。
+- ChatGPTやnote: このコマンドで直接インストールするものではない。
+
+## インストール
+
+Codex CLIが使えるPCのターミナルで実行します。
 
 ```bash
 codex plugin marketplace add team478a/ai-maker-lab-plugins --ref main
 codex plugin add source-backed-article-studio@ai-maker-lab
+codex plugin list
 ```
 
-プロジェクトをCodexで開いたら、最初に次のように依頼します。
+一覧で`source-backed-article-studio@ai-maker-lab`が`installed, enabled`と表示されることを確認します。Codexデスクトップを併用する場合は、コマンド実行後にアプリを再起動します。
 
-> このテーマの記事を作りたいです。読者と媒体を決め、資料の登録から始めてください。
+## 初めての記事下書き
 
-次に、自分が使ってよい資料・自分で確かめた事実・経験を入力して、こう依頼します。
+### 1. テーマと読者を伝える
 
-> 登録した資料に基づいてnoteの記事下書きを作り、未確認事項と根拠の一覧も示してください。
+Codexで作業フォルダを開き、次の例を自分のテーマへ置き換えて依頼します。
 
-生成されたMarkdownを確認・編集し、ご自身のnote記事として利用してください。
+> 初心者向けに、ベランダで育てるハーブの記録記事を作りたいです。読者は初めて栽培する人、媒体はnoteです。まず記事プロジェクトを設定してください。
+
+### 2. 使用してよい資料を登録する
+
+自分で確認した資料だけを渡し、事実、体験、文体、背景のどれかを伝えます。非公開資料は、そのまま公開してよい内容だけを明示してください。
+
+> この栽培メモは自分の体験です。日付と作業内容は記事に使えますが、氏名と住所は使わないでください。未確認の効果は事実として書かないでください。
+
+URLを登録しただけでは、そのページを読んだ証明にはなりません。取得できた資料と未取得の資料を区別します。
+
+### 3. 下書きを作る
+
+> 登録した資料だけに基づいてnote記事の下書きを作ってください。未確認事項と、事実ごとの根拠をmanifestへ残してください。
+
+通常は記事プロジェクト内に`project.json`、`sources.json`、`drafts/<記事ID>.md`、`drafts/<記事ID>.manifest.json`が作られます。保存先は作業環境と依頼内容により変わるため、完了時に表示されるパスを確認してください。
+
+完全な例は[初心者向けサンプル](../examples/beginner-note/README.md)で確認できます。
+
+## noteへ貼り付ける前に
+
+- Markdown本文を読み、見出し、改行、タイトルを調整する。
+- manifestを見て、各事実に根拠があるか確認する。
+- 引用、著作権、個人情報、PR表示、最新情報を確認する。
+- 未確認の実績、売上、効果、利用者の感想を追加しない。
+- noteへの貼り付けと公開は自分で行う。
 
 ## 更新
+
 ```bash
 codex plugin marketplace upgrade ai-maker-lab
 codex plugin add source-backed-article-studio@ai-maker-lab
+codex plugin list
 ```
 
-## 初心者向けの注意
-- このコマンドはCodex CLI用です。**ChatGPTアプリやnoteにそのままインストールできるという案内ではありません。**
-- Codexデスクトップの画面表示は公開前の最終目視確認が残っています。公式Plugin Directoryへの掲載を確認したものではありません。
-- 資料を登録しただけで内容が真実と保証されるわけではありません。引用、事実関係、著作権、個人情報、PR表示は公開前に確認してください。
-- 「AIが自動で収益を発生させる」「完全自動投稿ができる」とは説明しません。
+更新後に表示されるversionを確認します。既存の記事プロジェクトは削除せず、必要なら先にバックアップしてください。
 
-## 関連する別ツール（開発中）
-AI MAKER LABでは、noteのURLからTikTok・Instagram・X向けの宣伝用動画と投稿文を作る**note集客動画メーカー**も企画中です。こちらは未配布・未実装であり、このPluginには含まれません。
+## 困ったとき
 
-## サポート・ライセンス
-- バグ報告：<https://github.com/team478a/ai-maker-lab-plugins/issues>
-- プライバシー：<https://github.com/team478a/ai-maker-lab-plugins/blob/main/plugins/source-backed-article-studio/legal/PRIVACY.md>
-- 利用条件：<https://github.com/team478a/ai-maker-lab-plugins/blob/main/plugins/source-backed-article-studio/legal/TERMS.md>
-- ライセンス：MIT（リポジトリの `LICENSE` を参照）
-- AI MAKER LAB：<https://note.com/ai_maker_lab>
+- Pluginが見つからない: マーケットプレイス追加コマンドと`--ref main`を確認する。
+- 更新されない: `marketplace upgrade`後にPlugin追加コマンドを再実行し、一覧のversionを確認する。
+- 資料が使われない: `sources.json`の`access_status`、`publishable`、役割を確認する。
+- 非公開資料がある: 生データを公開Issueへ貼らず、再現用の架空データへ置き換える。
 
-## 公開前に自分たちで再確認すること
-- 少なくとも1台のクリーンなCodex CLI環境で導入からMarkdown生成まで再確認する
-- README・Plugin version・導入コマンドの整合を確認する
-- Codexデスクトップを利用者に案内する場合は、その画面での目視確認を済ませる
-- note告知記事で「無料」「APIキー不要」の条件と、Codex本体が必要である点を同じ目立ち方で記載する
+## ライセンス・利用条件・サポート
+
+- ライセンス: [MIT License](../LICENSE)
+- Privacy Policy: [Plugin Privacy Policy](../plugins/source-backed-article-studio/legal/PRIVACY.md)
+- Terms of Use: [Plugin Terms of Use](../plugins/source-backed-article-studio/legal/TERMS.md)
+- サポート: [GitHub Issues](https://github.com/team478a/ai-maker-lab-plugins/issues)
+
+公開IssueにはAPIキー、認証情報、個人情報、非公開資料、未公開原稿を記載しないでください。
