@@ -3,15 +3,17 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 EXAMPLE = ROOT / "examples" / "beginner-note"
-TEXT_SUFFIXES = {"", ".json", ".md", ".py", ".svg", ".txt", ".yaml", ".yml"}
+TEXT_SUFFIXES = {"", ".cmd", ".html", ".json", ".md", ".py", ".sh", ".svg", ".txt", ".yaml", ".yml"}
 FORBIDDEN = (
     re.compile(r"github\.com/team478a/note-monetization-system", re.IGNORECASE),
     re.compile(r"(?:[A-Z]:\\Users\\|/Users/)[^\s<]+", re.IGNORECASE),
@@ -59,8 +61,9 @@ def validate_required_files() -> None:
 
 def validate_marketplace() -> None:
     marketplace = read_json(ROOT / ".agents" / "plugins" / "marketplace.json")
-    if marketplace.get("name") != "ai-maker-lab":
-        fail("marketplace name must be ai-maker-lab")
+    expected_name = os.environ.get("AI_MAKER_LAB_MARKETPLACE_NAME", "ai-maker-lab")
+    if marketplace.get("name") != expected_name:
+        fail(f"marketplace name must be {expected_name}")
     plugins = marketplace.get("plugins")
     if not isinstance(plugins, list) or len(plugins) != 1:
         fail("marketplace must contain exactly one Plugin")
@@ -148,7 +151,17 @@ def scan_public_tree() -> None:
                 fail(f"private or secret value detected in {path.relative_to(ROOT).as_posix()}")
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--root", type=Path, default=ROOT)
+    return parser.parse_args()
+
+
 def main() -> None:
+    global ROOT, EXAMPLE
+    args = parse_args()
+    ROOT = args.root.resolve()
+    EXAMPLE = ROOT / "examples" / "beginner-note"
     validate_required_files()
     validate_marketplace()
     validate_guide()
