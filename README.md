@@ -14,6 +14,16 @@ AI MAKER LABが提供するChatGPT / Codex向けPluginの配布用マーケッ�
 - 非公開資料は明示的に許可した文だけを使用
 - noteやWordPressへの投稿、予約、決済は行わない
 
+## 初心者向けダウンロード
+
+ターミナルでGitのマーケットプレイスを追加する代わりに、初心者向けスターターキットをダウンロードできます。
+
+- [Source Article Studio 0.2.2 スターターキットをダウンロード](https://github.com/team478a/ai-maker-lab-plugins/releases/download/source-article-studio-v0.2.2/source-article-studio-starter-0.2.2.zip)
+- [SHA-256チェックサム](https://github.com/team478a/ai-maker-lab-plugins/releases/download/source-article-studio-v0.2.2/source-article-studio-starter-0.2.2.zip.sha256)
+- [Releaseの説明](https://github.com/team478a/ai-maker-lab-plugins/releases/tag/source-article-studio-v0.2.2)
+
+WindowsはZIPを展開して`install-windows.cmd`をダブルクリックします。macOS/Linuxは同梱の`install-macos-linux.sh`を実行します。Pluginは無料ですが、Codexを利用できるPC環境が別途必要です。
+
 ## インストール
 
 Codex CLIで次を実行します。
